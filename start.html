@@ -2,21 +2,49 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="start.css">
     <title>Haushaltsbuch</title>
+    <link rel="stylesheet" href="start.css">
 </head>
 <body>
-    <div class="main-div">
-        <div class="div-1">
-            <h1>Haushaltsbuch</h1>
-            <div class="Budget">
-                <div class="input-Budget">
-                    <h3>Geben Sie Ihr Budget ein.</h3>
-                    <input id="ID-Budget" type="number" placeholder="z.B. 2.500€">
-                </div>
-            </div>
-        </div>
+    <section class="container-large">
+        <h1>Haushaltsbuch Dashboard</h1>
+    <div class="budget-input">
+        <input type="number" id="budget-input" placeholder="Gebe dein Budget ein.">
+        <button id="speichernBudget">Speichern</button>
     </div>
+    <h2>Gesamtbudget: <span id="gesamtbudget">0</span>€</h2>
+    
+    <div class="ausgaben-input">
+        <input type="number" id="ausgaben-input" placeholder="Ausgaben">
+        <select id="kategorie">
+            <option value="Lebensmittel">Lebensmittel</option>
+            <option value="Miete">Miete</option>
+            <option value="Freizeit">Freizeit</option>
+            <option value="Kleidung">Kleidung</option>
+            <option value="Transport">Transport</option>
+            <option value="Versicherungen">Versicherungen</option>
+            <option value="Telekommunikation">Telekommunikation</option>
+            <option value="Gesundheit">Gesundheit</option>
+            <option value="Haushaltsgüter">Haushaltsgüter</option>
+            <option value="Bildung">Bildung</option>
+            <option value="Sparen">Sparen</option>
+            <option value="Sonstiges">Sonstiges</option>
+        </select>
+        <button id="speichernAusgaben">Speichern</button>
+    </div>
+    <table id="ausgaben-tabelle">
+        <thead>
+            <tr>
+                <th>Betrag</th>
+                <th>Kategorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ausgaben werden hier eingefügt -->
+        </tbody>
+    </table>
+    <button id="resetButton" class="reset-button">Alles zurücksetzen</button>
+    </section>
+    <script src="start.js"></script>
 </body>
 </html>
